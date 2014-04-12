@@ -143,6 +143,22 @@ Release 0.8.0 - unreleased
 
   IMPROVEMENTS
 
+    TAJO-732: Support executing LINUX shell command and HDFS command.
+    (hyoungjun kim via hyunsik)
+
+    TAJO-745: APIs in TajoClient and JDBC should be case sensitive.
+
+    TAJO-743: Change the default resource allocation policy of leaf tasks. (jinho)
+
+    TAJO-717: Improve file splitting for large number of splits. (jinho)
+
+    TAJO-356: Improve TajoClient to directly get query results in the first request.
+    (hyunsik)
+
+    TAJO-728: Supports expression IN statement. (hyunsik)
+
+    TAJO-725: Broadcast JOIN should supports multiple tables. (hyoungjunkim via jaehwa)
+
     TAJO-735: Remove multiple SLF4J bindings message. (hyoungjunkim via hyunsik)
 
     TAJO-709: Add .reviewboardrc and use rbt instead of post-review.
@@ -303,6 +319,15 @@ Release 0.8.0 - unreleased
     (Keuntae Park via jihoon)
 
   BUG FIXES
+
+    TAJO-563: INSERT OVERWRITE should not remove data before query success.
+    (hyunsik)
+
+    TAJO-738: NPE occur when failed in QueryMaster's GlobalPlanner.build().
+    (hyoungjunkim via hyunsik)
+
+    TAJO-739: A subquery with the same column alias caused planning error.
+    (hyoungjunkim via hyunsik)
 
     TAJO-729: PreLogicalPlanVerifier verifies distinct aggregation functions
     incorrectly. (hyunsik)
@@ -669,6 +694,11 @@ Release 0.8.0 - unreleased
 
   SUB TASKS
 
+    TAJO-215: Catalog should allow compatible types when finding functions.
+    (Alvin Henrick via hyunsik)
+
+    TAJO-736: Add table management documentation. (hyunsik)
+
     TAJO-602: WorkerResourceManager should be broke down into 3 parts.
     (hyunsik)
 
@@ -890,6 +920,9 @@ Release 0.2.0 - released
     TAJO-2: remove all @author tags and update license header. (hyunsik)
 
   BUG FIXES
+
+    TAJO-754: failure of INSERT INTO may remove the target table.
+    (hyunsik)
 
     TAJO-682: RangePartitionAlgorithm should be improved to handle empty
     texts. (hyunsik)
